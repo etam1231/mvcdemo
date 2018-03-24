@@ -1,0 +1,36 @@
+﻿@using System.Data.Entity.Core.Objects;
+@using MvcLifeCycle.Models
+@using MvcLifeCycle.Entity;
+@{
+    ViewBag.Title = "Home Page";
+    SampleEntities db = new SampleEntities();
+    var listofstickynotes = db.StickyNotes.ToList();
+}
+
+@*<div class="container ext">
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" name="FirstName" id="fname" placeholder="FirstName" />
+        </div>
+        <div class="col-md-3">
+            <input type="text"name="LastName" id="lname" placeholder="LastName"/>
+        </div>
+        <div class="col-md-3">
+            <input type="text" name="Age" id="age" placeholder="Age"/>
+        </div>
+        <div class="col-md-3">
+            <input type="button" name="submit" id="submit" value="submit"/>
+        </div>
+    </div>
+</div>*@
+
+
+@*<div class="table">
+
+</div>*@
+
+
+<div id="divStickyNotesContainer" class="stickynote" style="background-color:aquamarine;height: 500px;width: 100%;margin-top: 26px;">
+</div>
+<input type="hidden" value="@Newtonsoft.Json.JsonConvert.SerializeObject(listofstickynotes)" id="stickyNotes"/>
+

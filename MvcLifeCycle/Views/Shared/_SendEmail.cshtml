@@ -1,0 +1,24 @@
+﻿@model MvcLifeCycle.Models.Employee
+
+@{
+    ViewBag.Title = " Send Email";
+}
+<h2>@ViewBag.Title.</h2>
+<table>    
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+        {
+          <tr>
+          @Html.TextBoxFor(x => x.Name,new {id="name"})
+          </tr>
+        <tr>
+            @Html.TextBoxFor(x => x.Country, new { id = "country" })
+        </tr>
+        <tr>
+            @Html.TextBoxFor(x => x.DepartmentName, new { id = "departmentname" })
+        </tr>
+
+        <tr>
+            <input type="submit" id="SendEmail" />
+        </tr>
+        }   
+</table>
