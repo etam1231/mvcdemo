@@ -19,13 +19,14 @@ namespace MvcLifeCycle.Controllers
         [HttpGet]
         public ActionResult Product()
         {
-             return View();
+            //this//
+
+            return View();
         }
 
         [HttpGet]
         public JsonResult GetAllProducts()
         {
-            //this//
             var listofproducts = repository.GetAll();   
             //Changes related to Product Controller in Product branch//
             return Json(listofproducts, JsonRequestBehavior.AllowGet);
