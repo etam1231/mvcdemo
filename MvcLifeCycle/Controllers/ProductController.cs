@@ -19,7 +19,9 @@ namespace MvcLifeCycle.Controllers
         [HttpGet]
         public ActionResult Product()
         {
-             return View();
+            //this//
+
+            return View();
         }
 
         [HttpGet]
