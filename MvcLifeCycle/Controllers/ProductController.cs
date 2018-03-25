@@ -25,7 +25,6 @@ namespace MvcLifeCycle.Controllers
         [HttpGet]
         public JsonResult GetAllProducts()
         {
-            //this //
             var listofproducts = repository.GetAll();   
             //Changes related to Product Controller in Product branch//
             return Json(listofproducts, JsonRequestBehavior.AllowGet);
